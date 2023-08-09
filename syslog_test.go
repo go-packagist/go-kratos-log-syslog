@@ -9,6 +9,7 @@ import (
 func TestSyslogLogger(t *testing.T) {
 	logger, err := New(&Config{
 		Network: "udp",
+		Addr:    "192.168.8.92:30732",
 		Tag:     "test",
 	})
 	defer logger.Close()
